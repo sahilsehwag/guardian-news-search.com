@@ -1,7 +1,6 @@
 import Guardian from "guardian-js";
-import secret from "guardian-secret";
 
-const api = new Guardian(secret, true);
+const api = new Guardian(process.env.REACT_APP_SECRET, true);
 
 export const types = {
   SET_ARTICLES: "articles/set-articles",
